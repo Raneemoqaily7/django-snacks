@@ -7,6 +7,14 @@
     <title>{% block page_title %} {% endblock %}</title>
 </head>
 <body>
+    {% block nav %}
+        <ul id="nav">
+            <li>{% block nav-home %}<a href="{% url 'home' %}">Home</a>{% endblock %}</li>
+            <li>{% block nav-about %}<a href="{% url 'about' %}">About</a>{% endblock %}</li>
+            
+        </ul>
+        {% endblock %}
     <h1> {% block content %} {% endblock %}</h1>
+    
 </body>
 </html>
